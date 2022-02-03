@@ -1,0 +1,97 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+.font {
+  font-family: "Poppins", sans-serif;
+}
+
+.radius {
+  border-top: none;
+  height: 50px;
+  width: 95%;
+  position: relative;
+  border-left: none;
+}
+.radius:before,
+.radius:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -1px;
+}
+.radius:before {
+  height: 20px;
+  width: 100%;
+  width: calc(100% + 10px);
+
+  top: -1px;
+}
+.radius:after {
+  height: calc(100% - 18px);
+  border-left: 1px solid #000;
+  top: 19px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.modal-main {
+  position: relative;
+  background: white;
+  width: 25rem;
+  max-width: calc(100vw - 2rem);
+  max-height: calc(100vh - 2rem);
+  height: auto;
+  top: 45%;
+  overflow-y: auto;
+  border-radius: 10px;
+  box-shadow: 10px green;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal-maine {
+  position: relative;
+  background: white;
+  width: 40rem;
+  max-width: calc(100vw - 2rem);
+  max-height: calc(100vh - 2rem);
+  height: auto;
+  top: 45%;
+  overflow-y: auto;
+  border-radius: 10px;
+  box-shadow: 10px green;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+.stripe {
+  height: 3px;
+  background: #0a335c;
+  position: absolute;
+  /* top: 20px; */
+  bottom: 85%;
+  transition: left 0.9s;
+  transition-timing-function: fade-in-left;
+}
+.stripe:hover {
+  display: none;
+}
